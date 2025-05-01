@@ -7,14 +7,14 @@ const authRoute = require('./routes/authRoute')
 const transactionRoute = require('./routes/authRoute')
 const adminRoute = require('./routes/adminRoute')
 
+
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:5173', // ✅ replace with your frontend URL
+    origin: 'https://banksystem-q5kd.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
 app.use(express.json())
-
 
 sequelize.sync()
     .then(()=>{console.log('connected to Mysql') })
