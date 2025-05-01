@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const Port = 5000;
@@ -7,7 +8,11 @@ const transactionRoute = require('./routes/authRoute')
 const adminRoute = require('./routes/adminRoute')
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173', // ✅ replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
 app.use(express.json())
 
 
