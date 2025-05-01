@@ -7,7 +7,6 @@ const authRoute = require('./routes/authRoute')
 const transactionRoute = require('./routes/authRoute')
 const adminRoute = require('./routes/adminRoute')
 
-
 const cors = require('cors');
 app.use(cors({
     origin: 'https://banksystem-q5kd.onrender.com',
